@@ -1,0 +1,115 @@
+.meetArticle {
+  width: 21.3rem;
+  height: 21.6rem;
+  border: 4px solid #000;
+  background: #fff9ed;
+  box-shadow: 7px 7px 0px 0px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.meetArticle > h3 {
+  width: 20rem;
+  height: 4rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  font-family: Overpass Mono;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  line-height: normal;
+
+  text-align: center;
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+.imgSection {
+  position: relative;
+}
+
+.imgSection > img {
+  box-shadow: 9px 9px 0px 0px #000;
+}
+.imgSection > span {
+  width: 4.6rem;
+  height: 2.1rem;
+  border: 3px solid #000;
+  background: #ff9f9f;
+  box-shadow: 2px 2px 0px 0px #000;
+
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  font-weight: bolder;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+
+.imgSection > span > p {
+  height: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.iconStile {
+  margin-top: 1px;
+  object-fit: scale-down;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4.375rem;
+  border: 2px solid #000;
+  background: #fff;
+  box-shadow: 2px 2px 0px 0px #000;
+}
+.dataSection,
+.dataSection > div {
+  display: flex;
+}
+
+.dataSection {
+  justify-content: space-between;
+  width: 90%;
+}
+.dataSection > div {
+  display: flex;
+  gap: 12px;
+}
+
+.ubicationSection {
+  width: 12.125rem;
+  height: 1.75rem;
+  border-radius: 4.375rem;
+  border: 2px solid #000;
+  background: #fff;
+  box-shadow: 2px 2px 0px 0px #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px;
+}
+.ubicationSection > p {
+  width: 10rem;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-align: center;
+  font-size: 12px;
+  font-family: Overpass Mono;
+  font-weight: 700;
+}
+.smileAdd {
+  width: 4rem;
+  position: absolute;
+  bottom: -2rem;
+  left: -2rem;
+  display: none;
+}

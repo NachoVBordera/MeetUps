@@ -1,0 +1,70 @@
+header {
+  background-image: url(../../assets/backgroundHeader.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 4px solid black;
+  position: relative;
+  height: 14.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header > img {
+  width: 43.7rem;
+  user-select: none;
+}
+
+header > button {
+  font-family: "Rubik Mono One", sans-serif;
+  width: 6.3rem;
+  height: 3rem;
+  border-radius: 0.6875rem;
+  border: 4px solid #000;
+  background: #fff;
+  box-shadow: 4px 4px 0px 0px #a7a6ff;
+  position: absolute;
+  bottom: -25px;
+}
+
+button.userButton {
+  width: min-content;
+  height: min-content;
+  border-radius: 50%;
+  bottom: -35px;
+  border: 4px solid black;
+}
+
+.cl-userButton-root,
+.cl-userButtonBox,
+.cl-avatarBox {
+  width: 64px;
+  height: 64px;
+}
+
+button.userButton:hover {
+  box-shadow: 4px 4px 0px 0px #7472ff;
+}
+
+@media (max-width: 450px) {
+  header {
+    height: 9rem;
+  }
+  header > button {
+    width: 4rem;
+    height: 1.8rem;
+    font-size: 12px;
+
+    bottom: -1rem;
+  }
+  button.userButton {
+    bottom: -1.6rem;
+    border: 3px solid #000;
+  }
+  .cl-userButton-root,
+  .cl-userButtonBox,
+  .cl-avatarBox {
+    width: 40px;
+    height: 40px;
+  }
+}

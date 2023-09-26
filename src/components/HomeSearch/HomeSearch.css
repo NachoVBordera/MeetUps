@@ -1,0 +1,33 @@
+.homeSearch {
+  margin-top: 1rem;
+  height: 73vh;
+  background-image: url("../../assets/dots.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homeSearch > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeSearch > div > label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homeSearch > div > label > span {
+  font-family: "Rubik Mono One", sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (max-width: 450px) {
+}
