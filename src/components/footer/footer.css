@@ -1,0 +1,23 @@
+footer {
+  gap: 2rem;
+  font-family: Rubik Mono One;
+  font-size: 1rem;
+  text-align: center;
+}
+footer > section {
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+footer > section > span {
+  width: 2rem;
+}
+@media (max-width: 450px) {
+  footer > section {
+    font-size: 12px;
+  }
+}

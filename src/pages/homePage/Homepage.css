@@ -1,0 +1,6 @@
+.HomePageMain {
+  display: grid;
+  grid-template-rows: 25% 70% 5%;
+  grid-template-columns: 1fr;
+  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+}

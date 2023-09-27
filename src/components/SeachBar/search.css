@@ -3,14 +3,15 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 .inputSelect {
   height: 3rem;
   text-wrap: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 
-  max-width: 24.5rem;
+  width: 24.5rem;
+  max-width: 26rem;
   border: 5px solid #000;
   background: #fff;
   box-shadow: 4px 4px 0px 0px #a7a6ff;
