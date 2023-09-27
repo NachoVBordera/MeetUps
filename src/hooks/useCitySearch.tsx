@@ -6,7 +6,7 @@ export const useCitySearch = (cities: city[]) => {
   const [filteredCities, setFilteredCities] = React.useState([]);
   const [isSearching, setIsSearching] = React.useState(false);
 
-  const handleInputChange = (newValue) => {
+  const handleInputChange = (newValue: city) => {
     setIsSearching(true);
     setTimeout(() => {
       setIsSearching(false);
@@ -14,7 +14,7 @@ export const useCitySearch = (cities: city[]) => {
     }, 1000);
   };
 
-  const handleCityChange = (selectedOption) => {
+  const handleCityChange = (selectedOption: city) => {
     setSelectedCity(selectedOption);
   };
   const filterCities = (inputValue) => {

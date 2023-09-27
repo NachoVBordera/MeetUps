@@ -4,7 +4,7 @@ export interface Meet {
   title: string;
   description: string;
   ubication: string;
-  date: Date;
+  date: string;
   photo: string;
   subject: string;
   created_at: string;

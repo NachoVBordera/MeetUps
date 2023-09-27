@@ -11,8 +11,9 @@ header {
   align-items: center;
 }
 header > img {
-  width: 43.7rem;
+  width: 43rem;
   user-select: none;
+  z-index: 1;
 }
 
 header > button {
@@ -25,6 +26,7 @@ header > button {
   box-shadow: 4px 4px 0px 0px #a7a6ff;
   position: absolute;
   bottom: -25px;
+  z-index: 1;
 }
 
 button.userButton {

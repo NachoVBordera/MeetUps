@@ -1,11 +1,11 @@
-import { Meet } from "../../types/meet";
+import { Meet } from "../../../types/meet";
 import "./Meetcard.css";
-import people from "../../assets/people.svg";
-import subject from "../../assets/subject.png";
-import smile from "../../assets/face.png";
-import imagetest from "../../assets/Imagetest.png";
-import calendar from "../../assets/calendar.svg";
-import pointer from "../../assets/pointer.svg";
+import people from "../../../assets/people.svg";
+import subject from "../../../assets/subject.png";
+import smile from "../../../assets/face.png";
+import imagetest from "../../../assets/Imagetest.png";
+import calendar from "../../../assets/calendar.svg";
+import pointer from "../../../assets/pointer.svg";
 const MeetCard: React.FC<{ meet: Meet }> = ({ meet }) => {
   return (
     <article className="meetArticle">
