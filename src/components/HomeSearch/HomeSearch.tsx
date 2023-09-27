@@ -5,15 +5,16 @@ import React from "react";
 const HomeSearch: React.FC = () => {
   return (
     <section className="homeSearch">
-      <div role="form">
+      <section role="form">
         <label>
           <span>
             <img src={no} alt="No" />
-            sigas la corriente. Crea tus propios caminos de divesrsión
+            <p>sigas la corriente.</p>
           </span>
+          <p>sigas la corriente. Crea tus propios caminos de divesrsión</p>
           <SeachBar />
         </label>
-      </div>
+      </section>
     </section>
   );
 };
