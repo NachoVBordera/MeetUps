@@ -4,15 +4,19 @@ import Header from "../../components/header/Header";
 import MeetsList from "../../components/meetsList/MeetsList";
 import SeachBar from "../../components/SeachBar/search";
 import Footer from "../../components/footer/Footer";
+import ButtonCreateSection from "../../components/createListOwnSection/createListButtonsSection";
 
 const PageEventList: React.FC = () => {
   return (
-    <section className="MeetListPage">
+    <main className="MeetListPage">
       <Header />
-      <SeachBar />
+      <aside>
+        <ButtonCreateSection />
+        <SeachBar />
+      </aside>
       <MeetsList />
       <Footer />
-    </section>
+    </main>
   );
 };
 

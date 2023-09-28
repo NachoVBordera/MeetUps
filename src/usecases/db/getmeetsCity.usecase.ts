@@ -1,7 +1,7 @@
 import { supabase } from "../../../supabaseConfig";
-import { meet } from "../../types/meet";
+import { Meet } from "../../types/meet";
 
-export const getmeetsCity = async (ubication: string): Promise<meet[]> => {
+export const getmeetsCity = async (ubication: string): Promise<Meet[]> => {
   try {
     let { data: meets } = await supabase
       .from("meets")
@@ -9,7 +9,7 @@ export const getmeetsCity = async (ubication: string): Promise<meet[]> => {
       .ilike("ubication", `%${ubication}%`);
     console.log(meets);
     if (meets && Array.isArray(meets)) {
-      return meets as meet[];
+      return meets as Meet[];
     } else {
       return [];
     }

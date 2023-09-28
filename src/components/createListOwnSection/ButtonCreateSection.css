@@ -1,0 +1,5 @@
+.ButtonCreateSection {
+  width: min-content;
+  display: flex;
+  gap: 1rem;
+}
