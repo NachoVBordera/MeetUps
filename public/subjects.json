@@ -1,0 +1,17 @@
+[
+  { "value": "Arte", "label": "Arte" },
+  { "value": "Astronomía", "label": "Astronomía" },
+  { "value": "Aventuras", "label": "Aventuras" },
+  { "value": "Cine", "label": "Cine" },
+  { "value": "Ciencia", "label": "Ciencia" },
+  { "value": "Danza", "label": "Danza" },
+  { "value": "Ecología", "label": "Ecología" },
+  { "value": "Graffiti", "label": "Graffiti" },
+  { "value": "Historia", "label": "Historia" },
+  { "value": "Juegos de Mesa", "label": "Juegos de Mesa" },
+  { "value": "Literatura", "label": "Literatura" },
+  { "value": "Moda", "label": "Moda" },
+  { "value": "Música", "label": "Música" },
+  { "value": "Tecnología", "label": "Tecnología" },
+  { "value": "Yoga", "label": "Yoga" }
+]

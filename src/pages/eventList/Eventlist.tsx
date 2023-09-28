@@ -5,6 +5,7 @@ import MeetsList from "../../components/meetsList/MeetsList";
 import SeachBar from "../../components/SeachBar/search";
 import Footer from "../../components/footer/Footer";
 import ButtonCreateSection from "../../components/createListOwnSection/createListButtonsSection";
+import MeetFilter from "../../components/MeetFilter/MeetFilter";
 
 const PageEventList: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const PageEventList: React.FC = () => {
       <Header />
       <aside>
         <ButtonCreateSection />
+        <MeetFilter />
         <SeachBar />
       </aside>
       <MeetsList />
