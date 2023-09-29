@@ -9,7 +9,10 @@ const ButtonCreateSection: React.FC = () => {
   if (user) {
     return (
       <section className="ButtonCreateSection">
-        <ButtonUi text="Crea tu evento" callback={() => navegate("/newmeet")} />
+        <ButtonUi
+          text="Crea tu evento"
+          callback={() => navegate("/meets/new")}
+        />
         <ButtonUi
           text="Ver Tus Eventos"
           callback={() => navegate(`/meets/${user.id}`)}

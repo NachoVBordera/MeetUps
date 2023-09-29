@@ -6,13 +6,12 @@ import "./MeetsList.css";
 const MeetsList: React.FC = () => {
   const [meets, setmeets] = React.useState([]);
   const { ubication } = useParams();
-  console.log(ubication);
 
   React.useEffect(() => {
     getmeetsCity(ubication).then((meets) => {
       setmeets(meets);
     });
-  }, []);
+  }, [ubication]);
 
   return (
     <section className="contailerList">

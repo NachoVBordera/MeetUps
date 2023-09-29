@@ -14,3 +14,12 @@ export interface Meet {
 interface userId {
   id: string;
 }
+
+export interface FormMeet {
+  title: string;
+  description: string;
+  ubication: string;
+  date: string;
+  photo: string;
+  subject: string;
+}

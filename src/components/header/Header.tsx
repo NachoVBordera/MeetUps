@@ -1,21 +1,17 @@
 import "./header.css";
 import logo from "../../assets/MEETUPSlogo.png";
 import { SignInButton, useAuth, UserButton } from "@clerk/clerk-react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 function Header() {
-  const navegate = useNavigate();
   const { isSignedIn } = useAuth();
-  const handleClik = (): void => {
-    navegate("/");
-  };
-  const urlRedirect = useParams();
+  const { url } = useParams();
 
   return (
     <header>
-      <img onClick={handleClik} src={logo} alt="Meetups logo" />
+      <img src={logo} alt="Meetups logo" />
       {isSignedIn ? (
         <button className="userButton" role="userbuton">
-          <UserButton afterSignOutUrl={urlRedirect} />
+          <UserButton afterSignOutUrl={url ?? "/"} />
         </button>
       ) : (
         <SignInButton>
