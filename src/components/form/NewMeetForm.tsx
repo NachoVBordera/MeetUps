@@ -6,6 +6,7 @@ import "./newmeetform.css";
 import SelectBarUbication from "../SlectBarUbication/SelectBarUbication";
 import useForm from "../../hooks/useForm";
 import imgLabel from "../../assets/imglabel.png";
+
 const NewMeetForm: React.FC = () => {
   const {
     meet,
@@ -14,12 +15,15 @@ const NewMeetForm: React.FC = () => {
     handleChange,
     handleSelect,
     handlefile,
+    postMeet,
   } = useForm();
+
   return (
     <form
       className="meetform"
       onSubmit={(e) => {
         e.preventDefault();
+        postMeet();
       }}
     >
       <ul>
@@ -58,7 +62,7 @@ const NewMeetForm: React.FC = () => {
           </label>
           <label>
             <textarea
-              placeholder="ESTE ES UN ESPACIO PARA LA DESCRIPCIÓN DE TI PLANAZO!!ESTES ESPACION TIENES QUE DECIR LA HORA Y EL LUGAR EXACTO "
+              placeholder="ESTE ES UN ESPACIO PARA LA DESCRIPCIÓN DE TU PLANAZO!! EN ESTE ESPACIO TIENES QUE DECIR LA HORA Y EL LUGAR EXACTO "
               id="description"
               value={meet.description}
               onChange={(e) => handleChange(e)}

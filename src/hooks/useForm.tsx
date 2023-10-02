@@ -1,8 +1,13 @@
 import React from "react";
-import { FormMeet } from "../types/meet";
+import { CreatedMeet, FormMeet, Meet } from "../types/meet";
+import { useUser } from "@clerk/clerk-react";
+import { inserMeet, uploadImage } from "../usecases/db/postMeet.usecase";
+import { v4 as uuidv4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 const useForm = () => {
-  const [imagePreview, setImagePreview] = React.useState("");
+  const navetage = useNavigate();
+  const [imagePreview, setImagePreview] = React.useState<string>("");
   const [meet, setMeet] = React.useState<FormMeet>({
     title: "",
     date: "",
@@ -11,41 +16,65 @@ const useForm = () => {
     subject: "",
     ubication: "",
   });
-  const hadleCitySelect = (selectedOption) => {
+  const [image, setImage] = React.useState<File | null>(null);
+  const { user } = useUser();
+
+  const hadleCitySelect = (selectedOption: any): void => {
     setMeet({
       ...meet,
       ubication: selectedOption.value,
     });
   };
-  const handleChange = ({ target }) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setMeet({
       ...meet,
-      [target.id]: target.value,
+      [event.target.id]: event.target.value,
     });
   };
-  const handleSelect = (target) => {
+  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>): void => {
     setMeet({
       ...meet,
-      subject: target.value,
+      subject: event.target.value,
     });
   };
-  const handlefile = ({ target }) => {
-    const inputImage = target.files[0];
-    console.log(URL.createObjectURL(inputImage));
-    setMeet({
-      ...meet,
-      photo: inputImage.name,
-    });
-    setImagePreview(URL.createObjectURL(inputImage));
+  const handlefile = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const inputImage = event.target.files && event.target.files[0];
+    if (inputImage) {
+      setImage(inputImage);
+      console.log(URL.createObjectURL(inputImage));
+      setMeet({
+        ...meet,
+        photo: inputImage.name,
+      });
+      setImagePreview(URL.createObjectURL(inputImage));
+    }
+  };
+
+  const postMeet = async () => {
+    if (user && image) {
+      const imgName = uuidv4();
+      await uploadImage(imgName, image);
+      const newMeet: CreatedMeet = {
+        ...meet,
+        user_id: user.id,
+        photo: imgName,
+      };
+      await inserMeet(newMeet);
+      // Lógica adicional después de la inserción de la reunión
+      // Manejar errores aquí
+      navetage("/");
+    }
   };
 
   return {
+    postMeet,
     meet,
     imagePreview,
     hadleCitySelect,
     handleChange,
     handleSelect,
     handlefile,
+    user,
   };
 };
 

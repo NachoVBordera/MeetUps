@@ -23,3 +23,13 @@ export interface FormMeet {
   photo: string;
   subject: string;
 }
+
+export interface CreatedMeet {
+  user_id: string;
+  title: string;
+  description: string;
+  ubication: string;
+  date: string;
+  photo: string;
+  subject: string;
+}

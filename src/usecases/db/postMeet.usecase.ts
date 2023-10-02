@@ -1,22 +1,15 @@
 import { supabase } from "../../../supabaseConfig";
-import { Meet } from "../../types/meet";
+import { CreatedMeet } from "../../types/meet";
 
-export const inserMeet = async (meet: Meet) => {
-  const { data, error } = await supabase
-    .from("meets")
-    .insert([
-      {
-        title: meet.title,
-        subject: meet.subject,
-        date: meet.date,
-        description: meet.description,
-        signedup_users: [],
-        user_id: meet.user_id,
-        ubication: meet.ubication,
-        photo: "",
-      },
-    ])
-    .select();
+export const inserMeet = async (meet: CreatedMeet) => {
+  const { data, error } = await supabase.from("meets").insert([meet]).select();
 
   return { data, error };
+};
+
+export const uploadImage = async (path: string, file: File) => {
+  const { error: uploadError } = await supabase.storage
+    .from("meetsImages")
+    .upload(path, file);
+  console.log("data", uploadError);
 };
