@@ -4,10 +4,9 @@ import { useUser } from "@clerk/clerk-react";
 import { inserMeet, uploadImage } from "../usecases/db/postMeet.usecase";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
-
 const useForm = () => {
   const navetage = useNavigate();
-  const [imagePreview, setImagePreview] = React.useState<string>("");
+  const [imagePreview, setImagePreview] = React.useState("");
   const [meet, setMeet] = React.useState<FormMeet>({
     title: "",
     date: "",
@@ -31,10 +30,10 @@ const useForm = () => {
       [event.target.id]: event.target.value,
     });
   };
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>): void => {
+  const handleSelect = (target): void => {
     setMeet({
       ...meet,
-      subject: event.target.value,
+      subject: target.value,
     });
   };
   const handlefile = (event: React.ChangeEvent<HTMLInputElement>): void => {

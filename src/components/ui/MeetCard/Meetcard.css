@@ -35,6 +35,9 @@
 }
 
 .imgSection > img {
+  width: 18.25rem;
+  object-fit: cover;
+  height: 10.4375rem;
   box-shadow: 9px 9px 0px 0px #000;
 }
 .imgSection > span {

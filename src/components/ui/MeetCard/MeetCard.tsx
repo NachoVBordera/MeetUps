@@ -3,16 +3,16 @@ import "./Meetcard.css";
 import people from "../../../assets/people.svg";
 import subject from "../../../assets/subject.png";
 import smile from "../../../assets/face.png";
-import imagetest from "../../../assets/Imagetest.png";
 import calendar from "../../../assets/calendar.svg";
 import pointer from "../../../assets/pointer.svg";
+
 const MeetCard: React.FC<{ meet: Meet }> = ({ meet }) => {
   return (
     <article className="meetArticle">
       <h3>{meet.title}</h3>
 
       <section className="imgSection">
-        <img src={imagetest} alt="event image" />
+        <img src={meet.photo} alt="event image" />
         <span>
           <img src={people} className="iconStile" alt="participants" />
           <p>{meet.signedup_users.length}</p>

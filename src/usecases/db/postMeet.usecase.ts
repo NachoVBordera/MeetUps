@@ -8,8 +8,5 @@ export const inserMeet = async (meet: CreatedMeet) => {
 };
 
 export const uploadImage = async (path: string, file: File) => {
-  const { error: uploadError } = await supabase.storage
-    .from("meetsImages")
-    .upload(path, file);
-  console.log("data", uploadError);
+  await supabase.storage.from("meetsImages").upload(path, file);
 };

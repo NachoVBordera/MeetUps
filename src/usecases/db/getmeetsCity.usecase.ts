@@ -7,9 +7,17 @@ export const getmeetsCity = async (ubication: string): Promise<Meet[]> => {
       .from("meets")
       .select("*")
       .ilike("ubication", `%${ubication}%`);
-    console.log(meets);
+
     if (meets && Array.isArray(meets)) {
-      return meets as Meet[];
+      const formatedMeets = meets.map((meet) => {
+        return {
+          ...meet,
+          photo: meet.photo
+            ? import.meta.env.VITE_REACT_APP_IMAGE_BASE_URL + meet.photo
+            : import.meta.env.VITE_REACT_APP_DEFAULT_PHOTO,
+        };
+      });
+      return formatedMeets as Meet[];
     } else {
       return [];
     }
