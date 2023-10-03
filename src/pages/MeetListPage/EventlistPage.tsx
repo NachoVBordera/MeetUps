@@ -12,9 +12,9 @@ const PageEventList: React.FC = () => {
     <main className="MeetListPage">
       <Header />
       <aside>
-        <ButtonCreateSection />
-        <MeetFilter />
         <SeachBar />
+        <MeetFilter />
+        <ButtonCreateSection />
       </aside>
       <MeetsList />
       <Footer />

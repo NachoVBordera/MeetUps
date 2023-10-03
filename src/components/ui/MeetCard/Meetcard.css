@@ -115,3 +115,9 @@
   left: -2rem;
   display: none;
 }
+
+.meetArticle:hover {
+  transform: scale(1.01);
+
+  cursor: auto;
+}

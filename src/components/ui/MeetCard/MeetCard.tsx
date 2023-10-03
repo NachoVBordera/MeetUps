@@ -5,10 +5,14 @@ import subject from "../../../assets/subject.png";
 import smile from "../../../assets/face.png";
 import calendar from "../../../assets/calendar.svg";
 import pointer from "../../../assets/pointer.svg";
+interface Props {
+  meet: Meet;
+  handleNavegate: (id: number) => void;
+}
 
-const MeetCard: React.FC<{ meet: Meet }> = ({ meet }) => {
+const MeetCard = ({ meet, handleNavegate }: Props) => {
   return (
-    <article className="meetArticle">
+    <article className="meetArticle" onClick={() => handleNavegate(meet.id)}>
       <h3>{meet.title}</h3>
 
       <section className="imgSection">
