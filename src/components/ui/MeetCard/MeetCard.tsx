@@ -19,7 +19,7 @@ const MeetCard = ({ meet, handleNavegate }: Props) => {
         <img src={meet.photo} alt="event image" />
         <span>
           <img src={people} className="iconStile" alt="participants" />
-          <p>{meet.signedup_users.length}</p>
+          <p>{meet.meets_users.length}</p>
         </span>
       </section>
 

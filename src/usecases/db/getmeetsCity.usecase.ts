@@ -5,10 +5,12 @@ export const getmeetsCity = async (ubication: string): Promise<Meet[]> => {
   try {
     let { data: meets } = await supabase
       .from("meets")
-      .select("*")
+      .select("*,meets_users(id, user_id) ")
       .ilike("ubication", `%${ubication}%`);
 
     if (meets && Array.isArray(meets)) {
+      console.log(meets);
+
       const formatedMeets = meets.map((meet) => {
         return {
           ...meet,

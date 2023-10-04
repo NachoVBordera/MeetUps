@@ -12,14 +12,15 @@ const MeetDetailPage = () => {
   React.useEffect(() => {
     if (id) getSingleMeetById(id).then((meet) => setMeet(meet));
   }, []);
-  console.log(meet);
 
   return (
-    <>
-      <Header />
-      <EvetDetail meet={meet} />
-      <aside></aside>
-    </>
+    meet && (
+      <>
+        <Header />
+        <EvetDetail meet={meet} />
+        <aside></aside>
+      </>
+    )
   );
 };
 

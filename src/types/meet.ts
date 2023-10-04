@@ -1,18 +1,19 @@
 export interface Meet {
   id: number;
-  user_id: string;
-  title: string;
+  created_at: string;
   description: string;
   ubication: string;
-  date: string;
   photo: string;
+  title: string;
   subject: string;
-  created_at: string;
-  signedup_users: userId[];
+  user_id: string;
+  date: string;
+  meets_users: MeetsUser[];
 }
 
-interface userId {
-  id: string;
+export interface MeetsUser {
+  id: number;
+  user_id: string;
 }
 
 export interface FormMeet {
