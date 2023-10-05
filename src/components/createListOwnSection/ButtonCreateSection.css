@@ -1,5 +1,11 @@
 .ButtonCreateSection {
-  width: 23rem;
+  max-width: 23rem;
   display: flex;
   gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .ButtonCreateSection {
+    width: 80vw;
+  }
 }

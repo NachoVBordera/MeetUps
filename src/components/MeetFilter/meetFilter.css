@@ -4,3 +4,8 @@
   font-weight: bolder;
   box-shadow: 4px 4px 0px 0px #a7a6ff;
 }
+@media screen and (max-width: 768px) {
+  .meetFilter {
+    width: 80vw;
+  }
+}
