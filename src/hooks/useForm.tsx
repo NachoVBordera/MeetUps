@@ -1,5 +1,5 @@
 import React from "react";
-import { CreatedMeet, FormMeet, Meet } from "../types/meet";
+import { CreatedMeet, FormMeet } from "../types/meet";
 import { useUser } from "@clerk/clerk-react";
 import { inserMeet, uploadImage } from "../usecases/db/postMeet.usecase";
 import { v4 as uuidv4 } from "uuid";
@@ -24,13 +24,17 @@ const useForm = () => {
       ubication: selectedOption.value,
     });
   };
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (
+    event:
+      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLInputElement>
+  ): void => {
     setMeet({
       ...meet,
       [event.target.id]: event.target.value,
     });
   };
-  const handleSelect = (target): void => {
+  const handleSelect = (target: any): void => {
     setMeet({
       ...meet,
       subject: target.value,

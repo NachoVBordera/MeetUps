@@ -4,7 +4,7 @@ import subjects from "../../../public/subjects.json";
 import "./meetFilter.css";
 
 const MeetFilter: React.FC = () => {
-  const [selected, setSelected] = React.useState();
+  const [selected, setSelected] = React.useState<any>();
   return (
     <section className="meetFilter">
       <Select
