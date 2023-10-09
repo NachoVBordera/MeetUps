@@ -14,7 +14,8 @@
 }
 
 .homeSearch > section > label {
-  width: 100%;
+  margin: 0 auto;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -48,6 +49,8 @@
 
 @media (max-width: 480px) {
   .homeSearch > section > label :nth-child(3) {
-    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
   }
 }

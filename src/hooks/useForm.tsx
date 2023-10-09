@@ -60,6 +60,7 @@ const useForm = () => {
       const newMeet: CreatedMeet = {
         ...meet,
         user_id: user.id,
+        user_name: user.fullName ?? "",
         photo: imgName,
       };
       await inserMeet(newMeet);

@@ -14,6 +14,7 @@ function App() {
         <Route path="/meets/:ubication" element={<PageEventList />} />
         <Route path="/meets/new" element={<NewMeetPage />} />
         <Route path="/meet/:id" element={<MeetDetailPage />} />
+        <Route path="/meet/user/:id" element={<p>hola</p>} />
       </Routes>
     </main>
   );

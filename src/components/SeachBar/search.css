@@ -4,14 +4,13 @@
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  width: 23rem;
+  width: 24rem;
 }
 .inputSelect {
   height: 3rem;
   text-wrap: nowrap;
   text-overflow: ellipsis;
 
-  max-width: 24.5rem;
   max-width: 26rem;
   border: 5px solid #000;
   background: #fff;
@@ -43,19 +42,27 @@ button.submitbutton:hover {
 
 .css-13cymwt-control {
   border-radius: 0% !important;
+  border: none !important;
+  width: 100% !important;
 }
 
 @media screen and (max-width: 768px) {
   .inputSection {
     margin-right: 17px;
     width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .inputSection > form {
-    margin: 0rem;
     display: flex;
+    flex-direction: column;
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    width: 80vw;
+    width: 100%;
+  }
+  .inputSelect {
+    width: 100% !important;
   }
 }

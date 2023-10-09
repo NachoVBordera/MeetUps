@@ -48,6 +48,7 @@ button.userButton {
 
 button.userButton:hover {
   box-shadow: 4px 4px 0px 0px #7472ff;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 @media (max-width: 450px) {

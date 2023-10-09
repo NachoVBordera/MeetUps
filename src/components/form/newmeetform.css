@@ -113,3 +113,28 @@
   box-shadow: 4px 4px 0px 0px #000;
   object-fit: cover;
 }
+
+@media screen and (max-width: 725px) {
+  .meetform {
+    height: max-content;
+  }
+  .meetform > ul > li > label {
+    width: 90%;
+  }
+  .meetform > ul:first-child > li:first-child > label:first-child > input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    text-overflow: ellipsis;
+  }
+  .meetform > ul:first-child > li:first-child > label:nth-child(2) {
+    width: 90%;
+  }
+  .meetform > ul:first-child > li:first-child > label:nth-child(3) > textarea {
+    width: 100%;
+  }
+  .meetform > ul:nth-child(2) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

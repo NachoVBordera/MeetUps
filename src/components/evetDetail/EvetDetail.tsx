@@ -10,7 +10,6 @@ interface Props {
 
 const EvetDetail = ({ meet }: Props) => {
   const { user } = useUser();
-  console.log({ user });
 
   return (
     meet && (
@@ -34,7 +33,7 @@ const EvetDetail = ({ meet }: Props) => {
           </li>
         </ul>
         {user ? (
-          user.id !== meet.user_id ? (
+          user.id === meet.user_id ? (
             <ul className="optionsUl">
               <li>
                 <button>Editar Evento</button>
@@ -48,7 +47,9 @@ const EvetDetail = ({ meet }: Props) => {
               <li>
                 <button
                   className="singUpButton"
-                  onClick={() => singUpUserMeet(user.id, meet.id)}
+                  onClick={() =>
+                    singUpUserMeet(user.id, user.imageUrl, meet.id)
+                  }
                 >
                   Unirme!!
                 </button>
