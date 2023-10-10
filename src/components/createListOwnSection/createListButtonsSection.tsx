@@ -15,7 +15,7 @@ const ButtonCreateSection: React.FC = () => {
         />
         <ButtonUi
           text="Ver Tus Eventos"
-          callback={() => navegate(`/meets/${user.id}`)}
+          callback={() => navegate(`/meets/user/${user.id}`)}
         />
       </section>
     );

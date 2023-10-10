@@ -1,12 +1,12 @@
 import { supabase } from "../../../supabaseConfig";
 import { Meet } from "../../types/meet";
 
-export const getMeetsCity = async (ubication: string): Promise<Meet[]> => {
+export const getMeetUser = async (user: string): Promise<Meet[]> => {
   try {
     let { data: meets } = await supabase
       .from("meets")
       .select("*,meets_users(id, user_id) ")
-      .ilike("ubication", `%${ubication}%`);
+      .ilike("user_id", `%${user}%`);
 
     if (meets && Array.isArray(meets)) {
       const formatedMeets = meets.map((meet) => {

@@ -38,3 +38,8 @@ export interface CreatedMeet {
   photo: string;
   subject: string;
 }
+
+export enum RenderType {
+  UBICATION,
+  USER,
+}

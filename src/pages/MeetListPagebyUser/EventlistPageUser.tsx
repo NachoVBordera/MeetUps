@@ -1,5 +1,5 @@
 import React from "react";
-import "./eventlistPage.css";
+
 import Header from "../../components/header/Header";
 import MeetsList from "../../components/meetsList/MeetsList";
 import SeachBar from "../../components/SeachBar/search";
@@ -8,7 +8,7 @@ import ButtonCreateSection from "../../components/createListOwnSection/createLis
 import MeetFilter from "../../components/MeetFilter/MeetFilter";
 import { RenderType } from "../../types/meet";
 
-const PageEventList: React.FC = () => {
+const PageEventListByUser: React.FC = () => {
   return (
     <main className="MeetListPage">
       <Header />
@@ -17,10 +17,10 @@ const PageEventList: React.FC = () => {
         <MeetFilter />
         <ButtonCreateSection />
       </aside>
-      <MeetsList render={RenderType.UBICATION} />
+      <MeetsList render={RenderType.USER} />
       <Footer />
     </main>
   );
 };
 
-export default PageEventList;
+export default PageEventListByUser;
