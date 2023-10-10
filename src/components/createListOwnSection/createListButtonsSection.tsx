@@ -20,7 +20,7 @@ const ButtonCreateSection: React.FC = () => {
       </section>
     );
   } else {
-    return <></>;
+    return <section></section>;
   }
 };
 

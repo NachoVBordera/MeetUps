@@ -4,7 +4,7 @@ import React from "react";
 import "./MeetsList.css";
 import { Meet, RenderType } from "../../types/meet";
 import { getMeetUser } from "../../usecases/db/getMeetsUser.usecase";
-import { getMeetsCity } from "../../usecases/db/getmeetsCity.usecase";
+import { getMeetsCity } from "../../usecases/db/getMeetsCity.usecase";
 
 interface Props {
   render: RenderType;

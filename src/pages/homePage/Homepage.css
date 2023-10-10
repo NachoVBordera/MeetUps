@@ -2,5 +2,12 @@
   display: grid;
   grid-template-rows: 25% 70% 5%;
   grid-template-columns: 1fr;
-  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+  height: 100vh;
+  position: relative;
+}
+
+.HomePageMain > :nth-child(2) {
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
 }
