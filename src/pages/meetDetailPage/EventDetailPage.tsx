@@ -23,7 +23,7 @@ const MeetDetailPage = () => {
   return (
     meet && (
       <main className="meetDetailPage">
-        <Header />
+        <Header nav={true} />
         <aside>
           <SeachBar />
           <UserAside meet={meet} />

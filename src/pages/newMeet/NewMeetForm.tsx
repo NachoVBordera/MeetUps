@@ -5,7 +5,7 @@ import Header from "../../components/header/Header";
 const NewMeetPage: React.FC = () => {
   return (
     <>
-      <Header />
+      <Header nav={true} />
       <NewMeetForm />
       <Footer />
     </>

@@ -7,7 +7,7 @@ import "./Homepage.css";
 function HomePage() {
   return (
     <main className="HomePageMain">
-      <Header />
+      <Header nav={false} />
       <ButtonCreateSection />
       <HomeSearch />
       <Footer />

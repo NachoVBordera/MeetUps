@@ -11,7 +11,7 @@ import { RenderType } from "../../types/meet";
 const PageEventList: React.FC = () => {
   return (
     <main className="MeetListPage">
-      <Header />
+      <Header nav={true} />
       <aside>
         <SeachBar />
         <MeetFilter />
