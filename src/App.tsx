@@ -6,10 +6,12 @@ import PageEventList from "./pages/MeetListPage/EventlistPage";
 import NewMeetPage from "./pages/newMeet/NewMeetForm";
 import MeetDetailPage from "./pages/meetDetailPage/EventDetailPage";
 import PageEventListByUser from "./pages/MeetListPagebyUser/EventlistPageUser";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <main>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/meets/:ubication" element={<PageEventList />} />

@@ -11,6 +11,8 @@
 
 .signedUpUsersSection > ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: max-content;
   position: relative;
@@ -37,22 +39,25 @@
   font-size: 1.6rem;
 }
 
+.signedUpUsersSection > ul > li:nth-child(1) {
+  position: relative;
+  left: 6rem;
+}
+
 .signedUpUsersSection > ul > li:nth-child(2) {
   position: relative;
-  right: 2rem;
+  left: 3rem;
 }
 .signedUpUsersSection > ul > li:nth-child(3) {
-  position: relative;
-  right: 4rem;
   z-index: 1;
 }
 .signedUpUsersSection > ul > li:nth-child(4) {
   position: relative;
-  right: 6rem;
+  right: 3rem;
   z-index: 1;
 }
 .signedUpUsersSection > ul > li:nth-child(5) {
   position: relative;
-  right: 8rem;
+  right: 6rem;
   z-index: 1;
 }

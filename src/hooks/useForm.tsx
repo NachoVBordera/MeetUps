@@ -64,9 +64,7 @@ const useForm = () => {
         photo: imgName,
       };
       await inserMeet(newMeet);
-      // Lógica adicional después de la inserción de la reunión
-      // Manejar errores aquí
-      navetage("/");
+      navetage(`/meets/user/${user.id}`);
     }
   };
 

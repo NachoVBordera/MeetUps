@@ -16,8 +16,6 @@ const MeetDetailPage = () => {
   React.useEffect(() => {
     if (id)
       getSingleMeetById(id).then((meet) => {
-        console.log(meet);
-
         setMeet(meet);
       });
   }, []);
