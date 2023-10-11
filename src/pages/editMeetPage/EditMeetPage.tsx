@@ -1,15 +1,15 @@
 import Footer from "../../components/footer/Footer";
-import NewMeetForm from "../../components/NewMeetForm/NewMeetForm";
 import Header from "../../components/header/Header";
+import EditMeetFoom from "../../components/EditMeetForm/EditMeetForm";
 
-const NewMeetPage: React.FC = () => {
+const EditMeetPage: React.FC = () => {
   return (
     <>
       <Header nav={true} />
-      <NewMeetForm />
+      <EditMeetFoom />
       <Footer />
     </>
   );
 };
 
-export default NewMeetPage;
+export default EditMeetPage;

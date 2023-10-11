@@ -6,7 +6,7 @@ import "./newmeetform.css";
 import SelectBarUbication from "../SlectBarUbication/SelectBarUbication";
 import useForm from "../../hooks/useForm";
 import imgLabel from "../../assets/imglabel.png";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const NewMeetForm: React.FC = () => {

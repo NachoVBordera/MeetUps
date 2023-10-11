@@ -70,7 +70,9 @@ const EvetDetail = ({ meet }: Props) => {
           user.id === meet.user_id ? (
             <ul className="optionsUl">
               <li>
-                <button>Editar Evento</button>
+                <button onClick={() => navegate(`/meet/edit/${meet.id}`)}>
+                  Editar Evento
+                </button>
               </li>
               <li>
                 <button onClick={deleteMeetWithConfirmation}>Eliminar</button>

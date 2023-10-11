@@ -7,6 +7,7 @@ import NewMeetPage from "./pages/newMeet/NewMeetForm";
 import MeetDetailPage from "./pages/meetDetailPage/EventDetailPage";
 import PageEventListByUser from "./pages/MeetListPagebyUser/EventlistPageUser";
 import { ToastContainer } from "react-toastify";
+import EditMeetPage from "./pages/editMeetPage/EditMeetPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/meets/user/:user" element={<PageEventListByUser />} />
         <Route path="/meets/new" element={<NewMeetPage />} />
         <Route path="/meet/:id" element={<MeetDetailPage />} />
+        <Route path="/meet/edit/:id" element={<EditMeetPage />} />
       </Routes>
     </main>
   );
