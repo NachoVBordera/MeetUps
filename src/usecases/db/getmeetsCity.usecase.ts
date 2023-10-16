@@ -17,6 +17,7 @@ export const getMeetsCity = async (ubication: string): Promise<Meet[]> => {
             : import.meta.env.VITE_REACT_APP_DEFAULT_PHOTO,
         };
       });
+
       return formatedMeets as Meet[];
     } else {
       return [];
