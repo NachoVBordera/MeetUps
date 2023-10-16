@@ -33,3 +33,21 @@
 .meetDetailPage > :nth-child(4) {
   grid-area: footer;
 }
+
+@media screen and (max-width: 1049px) {
+  .meetDetailPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .meetDetailPage > :nth-child(2) {
+    padding-right: 0;
+  }
+  aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 368px) {
+}

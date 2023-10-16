@@ -61,3 +61,18 @@
   right: 6rem;
   z-index: 1;
 }
+@media screen and (max-width: 1024px) {
+  .signedUpUsersSection {
+    width: 23.25rem;
+    height: 8.8125rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .signedUpUsersSection {
+    width: 19.25rem;
+    justify-content: space-around;
+    box-shadow: unset;
+  }
+}
