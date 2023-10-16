@@ -11,6 +11,7 @@ interface Props {
 }
 const MeetsList = ({ render }: Props) => {
   const [meets, setmeets] = React.useState<Meet[]>([]);
+
   const navegate = useNavigate();
   const { ubication, user } = useParams();
   const param = render === RenderType.UBICATION ? ubication : user;
