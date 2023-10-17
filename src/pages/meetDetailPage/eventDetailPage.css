@@ -34,7 +34,7 @@
   grid-area: footer;
 }
 
-@media screen and (max-width: 1049px) {
+@media screen and (max-width: 1398px) {
   .meetDetailPage {
     display: flex;
     flex-direction: column;

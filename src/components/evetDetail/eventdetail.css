@@ -136,7 +136,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1398px) {
   .meetDetail {
     width: 23.25rem;
   }
@@ -233,6 +233,17 @@
 @media screen and (max-width: 368px) {
   .meetDetail {
     width: 19.25rem;
+  }
+  .meetDetail > ul:first-child > li:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18.25rem;
+    color: #000;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
   .meetDetail > ul:first-child > li:nth-child(2) > img {
     width: 18rem;

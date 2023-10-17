@@ -85,8 +85,13 @@ button.userButton:hover {
     height: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1398px) {
   header {
     width: 100vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  header > nav > button {
+    display: none;
   }
 }

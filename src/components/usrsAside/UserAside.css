@@ -36,7 +36,7 @@
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1398px) {
   .userAsideSection {
     width: 23.25rem;
     height: 8.8125rem;
