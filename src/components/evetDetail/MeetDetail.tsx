@@ -2,7 +2,7 @@ import { Meet } from "../../types/meet";
 import subjecImg from "../../assets/subject.png";
 import calendarImg from "../../assets/calendar.svg";
 import { useUser } from "@clerk/clerk-react";
-import "./eventdetail.css";
+import "./meetdetail.css";
 import { singUpUserMeet } from "../../usecases/db/singUpUserMeet.usecase";
 import { deleteMeet } from "../../usecases/db/deleteMeet.usecase";
 import { toast } from "react-toastify";
