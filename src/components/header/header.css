@@ -23,6 +23,15 @@ header > nav > button {
   border-radius: 12%;
   box-shadow: 3px 3px 0 0 #7472ff;
   user-select: none;
+  background-color: #ffffff;
+}
+header > nav > button:hover {
+  box-shadow: 3px 3px 0 0 #5350ff;
+  transform: scale(1.02);
+}
+
+header > nav > button:active {
+  transform: scale(0.9);
 }
 header > img {
   width: 43rem;
