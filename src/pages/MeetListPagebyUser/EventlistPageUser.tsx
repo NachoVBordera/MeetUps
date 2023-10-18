@@ -9,15 +9,17 @@ import MeetFilter from "../../components/MeetFilter/MeetFilter";
 import { RenderType } from "../../types/meet";
 
 const PageEventListByUser: React.FC = () => {
+  const [filter, setFilter] = React.useState<string>("");
+
   return (
     <main className="MeetListPage">
       <Header nav={true} />
       <aside>
         <SeachBar />
-        <MeetFilter />
+        <MeetFilter setFilter={setFilter} />
         <ButtonCreateSection />
       </aside>
-      <MeetsList render={RenderType.USER} />
+      <MeetsList render={RenderType.USER} filter={filter} />
       <Footer />
     </main>
   );
