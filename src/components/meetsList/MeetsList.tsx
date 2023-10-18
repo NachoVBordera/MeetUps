@@ -8,8 +8,9 @@ import { getMeetsCity } from "../../usecases/db/getMeetsCity.usecase";
 
 interface Props {
   render: RenderType;
+  filter: string;
 }
-const MeetsList = ({ render }: Props) => {
+const MeetsList = ({ render, filter }: Props) => {
   const [meets, setmeets] = React.useState<Meet[]>([]);
 
   const navegate = useNavigate();
@@ -35,6 +36,16 @@ const MeetsList = ({ render }: Props) => {
     fetchData();
   }, [render, param]);
 
+  const filteredMeets: Meet[] = React.useMemo(() => {
+    return meets !== null
+      ? meets.filter((meet) => {
+          return meet.subject
+            .toLocaleLowerCase()
+            .includes(filter.toLocaleLowerCase());
+        })
+      : meets;
+  }, [meets, filter]);
+
   const handleNavegate = (id: number) => {
     navegate(`/meet/${id}`);
   };
@@ -42,7 +53,7 @@ const MeetsList = ({ render }: Props) => {
   return (
     <section className="contailerList">
       <ul>
-        {meets.map((meet) => {
+        {filteredMeets.map((meet) => {
           return (
             <li key={meet.id}>
               <MeetCard meet={meet} handleNavegate={handleNavegate} />

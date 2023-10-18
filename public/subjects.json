@@ -1,4 +1,5 @@
 [
+  { "value": "", "label": "Todas" },
   { "value": "Arte", "label": "Arte" },
   { "value": "Astronomía", "label": "Astronomía" },
   { "value": "Aventuras", "label": "Aventuras" },
