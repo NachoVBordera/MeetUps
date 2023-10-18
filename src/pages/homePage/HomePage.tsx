@@ -1,4 +1,4 @@
-import HomeSearch from "../../components/HomeSearch/HomeSearch";
+import HomeSearch from "../../components/homeSearch/HomeSearch";
 import ButtonCreateSection from "../../components/createListOwnSection/createListButtonsSection";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
