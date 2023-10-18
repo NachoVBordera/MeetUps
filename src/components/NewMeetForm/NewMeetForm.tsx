@@ -3,7 +3,7 @@ import subjects from "../../../public/subjects.json";
 import { getCurrentDate } from "../../utils/getCurrentDate";
 import Select from "react-select";
 import "./newmeetform.css";
-import SelectBarUbication from "../SlectBarUbication/SelectBarUbication";
+import SelectBarUbication from "../slectBarUbication/SelectBarUbication";
 import useForm from "../../hooks/useForm";
 import imgLabel from "../../assets/imglabel.png";
 import { toast } from "react-toastify";

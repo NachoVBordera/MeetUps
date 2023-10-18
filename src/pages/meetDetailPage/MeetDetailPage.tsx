@@ -1,12 +1,12 @@
 import React from "react";
-import EvetDetail from "../../components/evetDetail/EvetDetail";
+import EvetDetail from "../../components/evetDetail/MeetDetail";
 import Header from "../../components/header/Header";
 import { useParams } from "react-router-dom";
 import { getSingleMeetById } from "../../usecases/db/getSingleMeetById.usecase";
 import { Meet } from "../../types/meet";
 import SignedUpUsers from "../../components/signedUpUsers/SignedUpUsers";
 import UserAside from "../../components/usrsAside/UserAside";
-import "./eventDetailPage.css";
+import "./meetDetailPage.css";
 import Footer from "../../components/footer/Footer";
 import SeachBar from "../../components/SeachBar/search";
 const MeetDetailPage = () => {

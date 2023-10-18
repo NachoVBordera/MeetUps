@@ -1,5 +1,5 @@
 import Footer from "../../components/footer/Footer";
-import NewMeetForm from "../../components/NewMeetForm/NewMeetForm";
+import NewMeetForm from "../../components/newMeetForm/NewMeetForm";
 import Header from "../../components/header/Header";
 
 const NewMeetPage: React.FC = () => {

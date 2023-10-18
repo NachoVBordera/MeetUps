@@ -1,5 +1,5 @@
 import React from "react";
-import "./eventlistPage.css";
+import "./meetlistPage.css";
 import Header from "../../components/header/Header";
 import MeetsList from "../../components/meetsList/MeetsList";
 import SeachBar from "../../components/SeachBar/search";

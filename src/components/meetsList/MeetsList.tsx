@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import MeetCard from "../ui/MeetCard/MeetCard";
+import MeetCard from "../ui/meetCard/MeetCard";
 import React from "react";
 import "./MeetsList.css";
 import { Meet, RenderType } from "../../types/meet";

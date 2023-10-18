@@ -3,7 +3,7 @@ import subjects from "../../../public/subjects.json";
 import { getCurrentDate } from "../../utils/getCurrentDate";
 import Select from "react-select";
 
-import SelectBarUbication from "../SlectBarUbication/SelectBarUbication";
+import SelectBarUbication from "../slectBarUbication/SelectBarUbication";
 import imgLabel from "../../assets/imglabel.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import HomePage from "./pages/homePage/HomePage";
-import PageEventList from "./pages/MeetListPage/EventlistPage";
+import PageEventList from "./pages/meetListPage/MeetslistPage";
 import NewMeetPage from "./pages/newMeet/NewMeetForm";
-import MeetDetailPage from "./pages/meetDetailPage/EventDetailPage";
-import PageEventListByUser from "./pages/MeetListPagebyUser/EventlistPageUser";
+import MeetDetailPage from "./pages/meetDetailPage/MeetDetailPage";
+import PageEventListByUser from "./pages/meetListPagebyUser/MeetlistPageUser";
 import { ToastContainer } from "react-toastify";
 import EditMeetPage from "./pages/editMeetPage/EditMeetPage";
 
