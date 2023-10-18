@@ -121,6 +121,7 @@
   transition: transform 0.2s ease-in-out;
   cursor: auto;
 }
+
 @media screen and (max-width: 768px) {
   li > .meetArticle {
     transform: scale(0.8);

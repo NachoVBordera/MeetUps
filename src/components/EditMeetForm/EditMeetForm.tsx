@@ -3,7 +3,7 @@ import subjects from "../../../public/subjects.json";
 import { getCurrentDate } from "../../utils/getCurrentDate";
 import Select from "react-select";
 
-import SelectBarUbication from "../slectBarUbication/SelectBarUbication";
+import SelectBarUbication from "../selectBarUbication/SelectBarUbication";
 import imgLabel from "../../assets/imglabel.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -39,6 +39,7 @@ const EditMeetFoom: React.FC = () => {
       showErrorToast("Todos los campos son obligatirios!");
       return;
     }
+
     postMeet();
     showSuccessToast("Evento modificado corectamente");
   };

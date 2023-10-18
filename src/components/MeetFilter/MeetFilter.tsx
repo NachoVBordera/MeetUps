@@ -12,6 +12,7 @@ const MeetFilter = ({ setFilter }: Props) => {
   const handleSelectChange = (newvalue: city | null) => {
     if (newvalue) {
       setSelected(newvalue);
+
       setFilter(newvalue.value);
     }
   };

@@ -3,7 +3,7 @@ import subjects from "../../../public/subjects.json";
 import { getCurrentDate } from "../../utils/getCurrentDate";
 import Select from "react-select";
 import "./newmeetform.css";
-import SelectBarUbication from "../slectBarUbication/SelectBarUbication";
+import SelectBarUbication from "../selectBarUbication/SelectBarUbication";
 import useForm from "../../hooks/useForm";
 import imgLabel from "../../assets/imglabel.png";
 import { toast } from "react-toastify";
@@ -19,6 +19,7 @@ const NewMeetForm: React.FC = () => {
     handlefile,
     postMeet,
   } = useForm();
+
   const showErrorToast = (message: string) => {
     toast.error(message);
   };

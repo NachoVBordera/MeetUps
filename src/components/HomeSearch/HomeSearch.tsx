@@ -1,8 +1,8 @@
-import SeachBar from "../SeachBar/search";
+import SeachBar from "../seachBar/search";
 import "./HomeSearch.css";
 import no from "../../assets/NO.png";
-import React from "react";
-const HomeSearch: React.FC = () => {
+
+const HomeSearch = () => {
   return (
     <section className="homeSearch">
       <section role="form">

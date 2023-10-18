@@ -17,6 +17,7 @@ const SeachBar: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (!selectedCity) return;
 
     const formatedUbication = selectedCity.value.split("/").join(" ");

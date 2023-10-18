@@ -2,7 +2,7 @@ import React from "react";
 import "./meetlistPage.css";
 import Header from "../../components/header/Header";
 import MeetsList from "../../components/meetsList/MeetsList";
-import SeachBar from "../../components/SeachBar/search";
+import SeachBar from "../../components/seachBar/search";
 import Footer from "../../components/footer/Footer";
 import ButtonCreateSection from "../../components/createListOwnSection/createListButtonsSection";
 import MeetFilter from "../../components/meetFilter/MeetFilter";
