@@ -39,7 +39,6 @@ const EditMeetFoom: React.FC = () => {
       showErrorToast("Todos los campos son obligatirios!");
       return;
     }
-
     postMeet();
     showSuccessToast("Evento modificado corectamente");
   };
