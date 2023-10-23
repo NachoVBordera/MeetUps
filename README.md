@@ -1,4 +1,6 @@
-<a href="https://ibb.co/fn8c52H"><img src="https://i.ibb.co/qW0Zfdp/Group-14.png" alt="meetUps" ></a>
+<p align="center">
+<img src="https://i.ibb.co/qW0Zfdp/Group-14.png" alt="meetUps" >
+</p>
 
 <p id="description">This project displays meetups by city and theme. Users can sign up to attend these events, which facilitates the connection between people with similar interests and the creation of vibrant communities.</p>
 
