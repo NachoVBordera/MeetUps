@@ -136,7 +136,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 1398px) {
+@media screen and (max-width: 998px) {
   .meetDetail {
     width: 23.25rem;
   }
@@ -230,6 +230,7 @@
     line-height: normal;
   }
 }
+
 @media screen and (max-width: 368px) {
   .meetDetail {
     width: 19.25rem;
