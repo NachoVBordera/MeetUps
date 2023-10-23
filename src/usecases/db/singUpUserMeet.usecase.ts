@@ -1,10 +1,3 @@
-//const { data, error } = await supabase
-// .from('meets_users')
-// .insert([
-//   { some_column: 'someValue', other_column: 'otherValue' },
-// ])
-// .select()
-
 import { supabase } from "../../../supabaseConfig";
 
 export const singUpUserMeet = async (

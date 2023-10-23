@@ -7,6 +7,8 @@ import { singUpUserMeet } from "../../usecases/db/singUpUserMeet.usecase";
 import { deleteMeet } from "../../usecases/db/deleteMeet.usecase";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import React from "react";
+import { logOutUserMeet } from "../../usecases/db/logOutMeet";
 interface Props {
   meet: Meet;
 }
@@ -14,6 +16,33 @@ interface Props {
 const EvetDetail = ({ meet }: Props) => {
   const { user } = useUser();
   const navegate = useNavigate();
+  const [signed, setSigned] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    if (
+      user &&
+      meet.meets_users.some((meetUser) => meetUser.user_id === user.id)
+    ) {
+      setSigned(true);
+    } else {
+      setSigned(false);
+    }
+  }, [meet, user]);
+
+  const handeleSingUp = () => {
+    if (user) {
+      singUpUserMeet(user.id, user.imageUrl, meet.id);
+      setSigned(!signed);
+      toast.success("Te has unido correctamente");
+    }
+  };
+  const handeleLogOut = () => {
+    if (user) {
+      logOutUserMeet(user.id, meet.id);
+      setSigned(!signed);
+      toast.success("Has abandonado correctamente");
+    }
+  };
   const deleteMeetWithConfirmation = () => {
     const confirmDelete = () => {
       deleteMeet(meet.id);
@@ -78,16 +107,19 @@ const EvetDetail = ({ meet }: Props) => {
                 <button onClick={deleteMeetWithConfirmation}>Eliminar</button>
               </li>
             </ul>
+          ) : !signed ? (
+            <ul>
+              <li>
+                <button className="singUpButton" onClick={handeleSingUp}>
+                  Unirme!!
+                </button>
+              </li>
+            </ul>
           ) : (
             <ul>
               <li>
-                <button
-                  className="singUpButton"
-                  onClick={() =>
-                    singUpUserMeet(user.id, user.imageUrl, meet.id)
-                  }
-                >
-                  Unirme!!
+                <button className="singUpButton" onClick={handeleLogOut}>
+                  Abandonar
                 </button>
               </li>
             </ul>
