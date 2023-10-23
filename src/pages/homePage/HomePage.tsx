@@ -5,6 +5,7 @@ import Header from "../../components/header/Header";
 import "./Homepage.css";
 
 function HomePage() {
+  console.log("What are you looking for🤨?");
   return (
     <main className="HomePageMain">
       <Header nav={false} />

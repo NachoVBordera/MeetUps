@@ -45,7 +45,6 @@ const MeetsList = ({ render, filter }: Props) => {
         })
       : meets;
   }, [meets, filter]);
-  console.log(filteredMeets);
 
   const handleNavegate = (id: number) => {
     navegate(`/meet/${id}`);
