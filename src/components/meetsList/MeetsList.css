@@ -9,7 +9,13 @@
   justify-items: center;
   margin-bottom: 2rem;
 }
+.noMeetUpUl {
+  align-content: center;
+}
 
+.noMeetUpImage {
+  width: 30rem;
+}
 @media screen and (max-width: 768px) {
   .contailerList > ul {
     width: 100vw;
@@ -21,5 +27,8 @@
   }
   .contailerList > ul > li {
     margin: -1rem;
+  }
+  .noMeetUpImage {
+    width: 20rem;
   }
 }

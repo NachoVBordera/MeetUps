@@ -5,7 +5,7 @@ import "./MeetsList.css";
 import { Meet, RenderType } from "../../types/meet";
 import { getMeetUser } from "../../usecases/db/getMeetsUser.usecase";
 import { getMeetsCity } from "../../usecases/db/getMeetsCity.usecase";
-
+import noMeet from "../../assets/nomeet.png";
 interface Props {
   render: RenderType;
   filter: string;
@@ -45,6 +45,7 @@ const MeetsList = ({ render, filter }: Props) => {
         })
       : meets;
   }, [meets, filter]);
+  console.log(filteredMeets);
 
   const handleNavegate = (id: number) => {
     navegate(`/meet/${id}`);
@@ -52,15 +53,23 @@ const MeetsList = ({ render, filter }: Props) => {
 
   return (
     <section className="contailerList">
-      <ul>
-        {filteredMeets.map((meet) => {
-          return (
-            <li key={meet.id}>
-              <MeetCard meet={meet} handleNavegate={handleNavegate} />
-            </li>
-          );
-        })}
-      </ul>
+      {filteredMeets.length !== 0 ? (
+        <ul>
+          {filteredMeets.map((meet) => {
+            return (
+              <li key={meet.id}>
+                <MeetCard meet={meet} handleNavegate={handleNavegate} />
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <ul className="noMeetUpUl">
+          <li>
+            <img className="noMeetUpImage" src={noMeet} alt="" />
+          </li>
+        </ul>
+      )}
     </section>
   );
 };
