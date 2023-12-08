@@ -11,7 +11,7 @@ const HomeSearch = () => {
             <img src={no} alt="No" />
             <p>sigas la corriente.</p>
           </span>
-          <p>sigas la corriente. Crea tus propios caminos de divesrsión</p>
+          <p>Crea tus propios caminos de divesrsión</p>
           <SeachBar />
         </label>
       </section>
